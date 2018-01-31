@@ -1,7 +1,7 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: nginx-ingress
+  name: demo-ingress
   labels:
     visualize: "true"
 spec:
@@ -10,5 +10,5 @@ spec:
       paths:
       - path: /
         backend:
-          serviceName: nginx
+          serviceName: demo-service
           servicePort: 80
