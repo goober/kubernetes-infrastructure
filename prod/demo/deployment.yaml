@@ -5,7 +5,7 @@ metadata:
   labels:
     app: demo
     visualize: "true"
-    version: v2
+    version: v1
 spec:
   replicas: 2
   selector:
@@ -16,12 +16,12 @@ spec:
       labels:
         app: demo
         visualize: "true"
-        version: v2
+        version: v1
     spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: web
-        image: goober/kubernetes-demo:v2
+        image: goober/kubernetes-demo:v1
         imagePullPolicy: Always
         ports:
         - containerPort: 80
